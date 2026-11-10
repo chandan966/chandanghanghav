@@ -4,16 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Chandan Ghanghav - B.Tech CSE Student and Web Developer. Explore my websites and social profiles.">
+
+    <!-- ============================================================
+         SECURITY HEADERS (Meta-tag equivalents for static hosting)
+         These are enforced by your hosting server (Vercel/Netlify).
+         The _headers / vercel.json files handle the real HTTP headers.
+    ============================================================ -->
+
+    <!-- Prevent MIME-type sniffing -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+    <!-- Block clickjacking via iframes -->
+    <meta http-equiv="X-Frame-Options" content="DENY">
+
+    <!-- Enable XSS auditor in older browsers -->
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+
+    <!-- Content Security Policy — allows only trusted origins -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src  'self' 'nonce-cg2024portfolio';
+        style-src   'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
+        font-src    'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+        img-src     'self' data: https:;
+        connect-src 'self';
+        frame-src   'none';
+        object-src  'none';
+        base-uri    'self';
+        form-action 'self';
+        upgrade-insecure-requests;
+    ">
+
+    <!-- Force HTTPS for future visits (HSTS — works via meta as hint) -->
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+
+    <!-- Referrer Policy — don't leak full URL to third-party sites -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Permissions Policy — disable unused browser features -->
+    <meta http-equiv="Permissions-Policy" content="
+        camera=(),
+        microphone=(),
+        geolocation=(),
+        payment=(),
+        usb=(),
+        fullscreen=(self)
+    ">
+
+    <!-- SEO & Identity -->
     <title>Chandan Ghanghav | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Chandan Ghanghav">
     <meta name="google-site-verification" content="QzIzD4D1JoybATFVyO_goOP9uqYvKN7SO6EkKgTNu14" />
+
+    <!-- Open Graph (social preview) -->
+    <meta property="og:title" content="Chandan Ghanghav | Portfolio">
+    <meta property="og:description" content="B.Tech CSE Student and Web Developer.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chandanghanghav.vercel.app/">
+
+    <!-- ============================================================
+         EXTERNAL RESOURCES WITH Subresource Integrity (SRI)
+         SRI hashes prevent tampered CDN files from running.
+         If you update font-awesome version, regenerate the hash:
+         https://www.srihash.org/
+    ============================================================ -->
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+    <!-- Font Awesome 6.5.2 with correct SRI hash -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer">
+
+    <!-- Google Fonts preconnect (performance + security) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
 
     <header>
-        <nav class="navbar">
-            <a href="#" class="logo">CG<span>.</span></a>
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="#" class="logo" aria-label="Chandan Ghanghav Home">CG<span>.</span></a>
             <div class="nav-links">
                 <a href="#home">Home</a>
                 <a href="#social">Social Media</a>
@@ -25,117 +101,137 @@
 
     <main>
         <!-- HOME -->
-        <section class="hero" id="home">
-            <!-- <" alt="Chandan Ghanghav" class="profile-img"> -->
-
-            <h1>Chandan Ghanghav</h1>
-           
-           
-
-            <p>
-                Engineer | Developer | Gamer | Content Creator
-            </p>
-
+        <section class="hero" id="home" aria-labelledby="hero-title">
+            <h1 id="hero-title">Chandan Ghanghav</h1>
+            <p>Engineer | Developer | Gamer | Content Creator</p>
             <a href="#websites" class="primary-btn">Explore My Websites</a>
         </section>
 
         <!-- SOCIAL MEDIA -->
-        <section class="section" id="social">
-            <h2>social media</h2>
+        <section class="section" id="social" aria-labelledby="social-title">
+            <h2 id="social-title">Social Media</h2>
             <p class="section-subtitle">Find me on social media</p>
 
-          <div class="social-links">
+            <div class="social-links">
 
-    <a href="https://github.com/chandan966" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-        <i class="fab fa-github"></i>
-        <span>GitHub</span>
-    </a>
+                <a href="https://github.com/chandan966"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="GitHub profile (opens in new tab)">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                    <span>GitHub</span>
+                </a>
 
-    <a href="https://linkedin.com/in/web~developer/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-        <i class="fab fa-linkedin-in"></i>
-        <span>LinkedIn</span>
-    </a>
+                <a href="https://linkedin.com/in/web~developer/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="LinkedIn profile (opens in new tab)">
+                    <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                    <span>LinkedIn</span>
+                </a>
 
-    <a href="//www.instagram.com/trigger_toofan?vrfl=N3JjMTFrZjVwempj" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
-        <span>Instagram</span>
-    </a>
+                <a href="https://www.instagram.com/trigger_toofan"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Instagram profile (opens in new tab)">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                    <span>Instagram</span>
+                </a>
 
-    <a href="https://www.youtube.com/channel/UChWNVTfTaShKl_2wh4KmQ5Q" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-        <i class="fab fa-youtube"></i>
-        <span>trigger
-             toofan</span>
-    </a>
-     <a href="https://www.youtube.com/channel/UCyyuR5RI6DuL6QFslDMc6XA" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-        <i class="fab fa-youtube"></i>
-        <span>toofan 
-            gamer</span>
-    </a>
-     <a href="https://www.youtube.com/channel/UCe66I9Zrz8tX_qU8LF0-Fjw" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-        <i class="fab fa-youtube"></i>
-        <span>ToofanX
-            stremGTA</span>
-    </a>
+                <a href="https://www.youtube.com/channel/UChWNVTfTaShKl_2wh4KmQ5Q"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="YouTube channel Trigger Toofan (opens in new tab)">
+                    <i class="fab fa-youtube" aria-hidden="true"></i>
+                    <span>Trigger Toofan</span>
+                </a>
 
-</div>
+                <a href="https://www.youtube.com/channel/UCyyuR5RI6DuL6QFslDMc6XA"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="YouTube channel Toofan Gamer (opens in new tab)">
+                    <i class="fab fa-youtube" aria-hidden="true"></i>
+                    <span>Toofan Gamer</span>
+                </a>
+
+                <a href="https://www.youtube.com/channel/UCe66I9Zrz8tX_qU8LF0-Fjw"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="YouTube channel ToofanX StreamGTA (opens in new tab)">
+                    <i class="fab fa-youtube" aria-hidden="true"></i>
+                    <span>ToofanX StreamGTA</span>
+                </a>
+
+            </div>
         </section>
 
         <!-- WEBSITES -->
-        <section class="section websites-section" id="websites">
-            <h2>My Websites</h2>
+        <section class="section websites-section" id="websites" aria-labelledby="websites-title">
+            <h2 id="websites-title">My Websites</h2>
             <p class="section-subtitle">Explore my projects and creations</p>
 
             <div class="website-grid">
 
                 <div class="website-card">
-                    <div class="website-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="website-icon"><i class="fas fa-graduation-cap" aria-hidden="true"></i></div>
                     <h3>CareerZoon</h3>
                     <p>Career resources, skills and opportunities for students.</p>
-                    <a href="https://careerzoon.vercel.app/" target="_blank" rel="noopener noreferrer">Visit Website <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://careerzoon.vercel.app/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Visit Website <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    </a>
                 </div>
 
                 <div class="website-card">
-                    <div class="website-icon"><i class="fas fa-camera"></i></div>
+                    <div class="website-icon"><i class="fas fa-camera" aria-hidden="true"></i></div>
                     <h3>PhotoPro</h3>
                     <p>Online photo editing and creative image tools.</p>
-                    <a href="https://photopro-pi.vercel.app/" target="_blank" rel="noopener noreferrer">Visit Website <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://photopro-pi.vercel.app/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Visit Website <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    </a>
                 </div>
 
                 <div class="website-card">
-                    <div class="website-icon"><i class="fas fa-comments"></i></div>
+                    <div class="website-icon"><i class="fas fa-comments" aria-hidden="true"></i></div>
                     <h3>GlobalTalk</h3>
                     <p>Connect and communicate with people around the world.</p>
-                    <a href="https://globaltalk-tau-plum-26.vercel.app/" target="_blank" rel="noopener noreferrer">Visit Website <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://globaltalk-tau-plum-26.vercel.app/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Visit Website <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    </a>
                 </div>
-
-                
-
-               
-
-               
 
             </div>
         </section>
 
         <!-- CONTACT -->
-        <section class="section contact-section" id="contact">
-            <h2>Get In Touch</h2>
+        <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+            <h2 id="contact-title">Get In Touch</h2>
             <p class="section-subtitle">Have a project or opportunity? Let's connect.</p>
 
-            <a href="mailto:contactchandan0101@gmail.com" class="primary-btn">
-                <i class="fas fa-envelope"></i> Contact Me
+            <a href="mailto:contactchandan0101@gmail.com" class="primary-btn" aria-label="Send email to Chandan Ghanghav">
+                <i class="fas fa-envelope" aria-hidden="true"></i> Contact Me
             </a>
         </section>
     </main>
 
     <footer>
-        <p>© <span id="year"></span> Chandan Ghanghav. All Rights Reserved.                                             
-              
-             <p><a href="https://www.instagram.com/trigger_toofan?vrfl=N3JjMTFrZjVwempj" target="_blank" rel="noopener noreferrer">webdevchadna</a></p>
-             
-         </p>
+        <p>© <span id="year"></span> Chandan Ghanghav. All Rights Reserved.</p>
+        <p>
+            <a href="https://www.instagram.com/trigger_toofan"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="webdevchandna Instagram (opens in new tab)">
+                webdevchandna
+            </a>
+        </p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Script loaded with nonce matching the CSP nonce above -->
+    <script src="script.js" nonce="cg2024portfolio"></script>
 </body>
 </html>

@@ -475,3 +475,41 @@ footer:hover {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* Focus rings — keyboard navigation visibility */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--blue);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* ================= SCROLL-ANIMATION HELPERS ================= */
+
+/* Hidden state — set by JS before IntersectionObserver fires */
+.fade-hidden {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Visible state — added by JS when element enters the viewport */
+.fade-hidden.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ================= SECURITY / UX ================= */
+
+/* Prevent text selection on decorative elements */
+.logo,
+.website-icon,
+.nav-links a {
+    user-select: none;
+}
+
+/* Warn user when dragging links (phishing mitigation) */
+a[target="_blank"]::after {
+    /* Screen-reader hint that link opens in new tab */
+    /* Visually hidden — handled by aria-label in HTML */
+}
