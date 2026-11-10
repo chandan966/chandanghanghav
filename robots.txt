@@ -1,0 +1,12 @@
+# robots.txt — Chandan Ghanghav Portfolio
+# https://chandanghanghav.vercel.app/
+
+User-agent: *
+Allow: /
+
+# Block access to config/security files
+Disallow: /vercel.json
+Disallow: /_headers
+
+# Point crawlers to the sitemap
+Sitemap: https://chandanghanghav.vercel.app/sitemap.xml

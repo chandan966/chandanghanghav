@@ -51,17 +51,52 @@
         fullscreen=(self)
     ">
 
-    <!-- SEO & Identity -->
-    <title>Chandan Ghanghav | Portfolio</title>
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="Chandan Ghanghav">
-    <meta name="google-site-verification" content="QzIzD4D1JoybATFVyO_goOP9uqYvKN7SO6EkKgTNu14" />
+    <!-- ============================================================
+         SEO — Primary Tags
+    ============================================================ -->
+    <title>Chandan Ghanghav | Web Developer & B.Tech CSE Student</title>
 
-    <!-- Open Graph (social preview) -->
-    <meta property="og:title" content="Chandan Ghanghav | Portfolio">
-    <meta property="og:description" content="B.Tech CSE Student and Web Developer.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://chandanghanghav.vercel.app/">
+    <!-- Primary Meta Tags -->
+    <meta name="title"       content="Chandan Ghanghav | Web Developer & B.Tech CSE Student">
+    <meta name="description" content="Chandan Ghanghav — B.Tech CSE student, web developer, gamer and content creator. Explore my projects: CareerZoon, PhotoPro, GlobalTalk, and more.">
+    <meta name="keywords"    content="Chandan Ghanghav, web developer, B.Tech CSE, portfolio, CareerZoon, PhotoPro, GlobalTalk, frontend developer, React, JavaScript, India developer, trigger toofan">
+    <meta name="author"      content="Chandan Ghanghav">
+    <meta name="robots"      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="language"    content="English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="theme-color" content="#3b82f6">
+
+    <!-- Canonical URL — prevents duplicate content penalty -->
+    <link rel="canonical" href="https://chandanghanghav.vercel.app/">
+
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="QzIzD4D1JoybATFVyO_goOP9uqYvKN7SO6EkKgTNu14">
+
+    <!-- ============================================================
+         SEO — Open Graph (Facebook, WhatsApp, LinkedIn preview)
+    ============================================================ -->
+    <meta property="og:type"        content="website">
+    <meta property="og:url"         content="https://chandanghanghav.vercel.app/">
+    <meta property="og:title"       content="Chandan Ghanghav | Web Developer & B.Tech CSE Student">
+    <meta property="og:description" content="B.Tech CSE student, web developer, gamer and content creator. Explore my projects: CareerZoon, PhotoPro, GlobalTalk and more.">
+    <meta property="og:image"       content="https://chandanghanghav.vercel.app/og-image.png">
+    <meta property="og:image:width"  content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt"   content="Chandan Ghanghav Portfolio">
+    <meta property="og:site_name"   content="Chandan Ghanghav Portfolio">
+    <meta property="og:locale"      content="en_IN">
+
+    <!-- ============================================================
+         SEO — Twitter / X Card (shows rich preview when shared)
+    ============================================================ -->
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:url"         content="https://chandanghanghav.vercel.app/">
+    <meta name="twitter:title"       content="Chandan Ghanghav | Web Developer & B.Tech CSE Student">
+    <meta name="twitter:description" content="B.Tech CSE student, web developer, gamer and content creator. Explore my projects: CareerZoon, PhotoPro, GlobalTalk.">
+    <meta name="twitter:image"       content="https://chandanghanghav.vercel.app/og-image.png">
+    <meta name="twitter:image:alt"   content="Chandan Ghanghav Portfolio">
+    <meta name="twitter:creator"     content="@trigger_toofan">
+    <meta name="twitter:site"        content="@trigger_toofan">
 
     <!-- ============================================================
          EXTERNAL RESOURCES WITH Subresource Integrity (SRI)
@@ -81,9 +116,93 @@
         crossorigin="anonymous"
         referrerpolicy="no-referrer">
 
+    <!-- ============================================================
+         SEO — JSON-LD Structured Data (Schema.org)
+         Tells Google exactly who you are → enables rich results.
+    ============================================================ -->
+    <script type="application/ld+json" nonce="cg2024portfolio">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://chandanghanghav.vercel.app/#person",
+          "name": "Chandan Ghanghav",
+          "url": "https://chandanghanghav.vercel.app/",
+          "description": "B.Tech CSE student, web developer, gamer and content creator from India.",
+          "jobTitle": "Web Developer",
+          "knowsAbout": ["Web Development", "JavaScript", "React", "HTML", "CSS", "Frontend Development"],
+          "sameAs": [
+            "https://github.com/chandan966",
+            "https://www.instagram.com/trigger_toofan",
+            "https://linkedin.com/in/web~developer/",
+            "https://www.youtube.com/channel/UChWNVTfTaShKl_2wh4KmQ5Q",
+            "https://www.youtube.com/channel/UCyyuR5RI6DuL6QFslDMc6XA",
+            "https://www.youtube.com/channel/UCe66I9Zrz8tX_qU8LF0-Fjw"
+          ],
+          "email": "contactchandan0101@gmail.com"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://chandanghanghav.vercel.app/#website",
+          "url": "https://chandanghanghav.vercel.app/",
+          "name": "Chandan Ghanghav | Portfolio",
+          "description": "Personal portfolio of Chandan Ghanghav — web developer and content creator.",
+          "author": { "@id": "https://chandanghanghav.vercel.app/#person" },
+          "inLanguage": "en-IN"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://chandanghanghav.vercel.app/#webpage",
+          "url": "https://chandanghanghav.vercel.app/",
+          "name": "Chandan Ghanghav | Web Developer & B.Tech CSE Student",
+          "description": "Chandan Ghanghav — B.Tech CSE student, web developer, gamer and content creator. Explore projects: CareerZoon, PhotoPro, GlobalTalk.",
+          "isPartOf": { "@id": "https://chandanghanghav.vercel.app/#website" },
+          "about": { "@id": "https://chandanghanghav.vercel.app/#person" },
+          "inLanguage": "en-IN"
+        },
+        {
+          "@type": "ItemList",
+          "name": "Chandan Ghanghav's Projects",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "CareerZoon",
+              "description": "Career resources, skills and opportunities for students.",
+              "url": "https://careerzoon.vercel.app/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "PhotoPro",
+              "description": "Online photo editing and creative image tools.",
+              "url": "https://photopro-pi.vercel.app/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "GlobalTalk",
+              "description": "Connect and communicate with people around the world.",
+              "url": "https://globaltalk-tau-plum-26.vercel.app/"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
     <!-- Google Fonts preconnect (performance + security) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap">
+
+    <!-- Sitemap reference for crawlers -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+    <!-- Favicon (add your own favicon.ico / favicon.png to project root) -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 </head>
 <body>
 
