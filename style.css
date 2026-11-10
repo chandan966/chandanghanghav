@@ -508,8 +508,4 @@ button:focus-visible {
     user-select: none;
 }
 
-/* Warn user when dragging links (phishing mitigation) */
-a[target="_blank"]::after {
-    /* Screen-reader hint that link opens in new tab */
-    /* Visually hidden — handled by aria-label in HTML */
-}
+/* External links: screen-reader hint is handled via aria-label in HTML */
