@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Security Headers (Meta-tag equivalents) -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src  'self' 'nonce-cg2024portfolio' 'strict-dynamic' https://pagead2.googlesyndication.com https://adservice.google.com https://www.googletagservices.com https://tpc.googlesyndication.com https://ep1.adtrafficquality.google https://ep2.adtrafficquality.google;
+        style-src   'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com 'unsafe-inline';
+        font-src    'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+        img-src     'self' data: https:;
+        connect-src 'self' https://pagead2.googlesyndication.com https://adservice.google.com https://googleads.g.doubleclick.net https://ep1.adtrafficquality.google https://ep2.adtrafficquality.google https://csi.gstatic.com;
+        frame-src   'self' https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://pagead2.googlesyndication.com https://*.safeframe.googlesyndication.com https://ep2.adtrafficquality.google https://www.google.com;
+        object-src  'none';
+        base-uri    'self';
+        form-action 'self';
+        upgrade-insecure-requests;
+    ">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), fullscreen=(self)">
+
+    <!-- SEO -->
+    <title>PhotoPro Case Study | Chandan Ghanghav Portfolio</title>
+    <meta name="description" content="Case study of PhotoPro — a browser-based online photo editing and creative image toolset built by Chandan Ghanghav.">
+    <meta name="author" content="Chandan Ghanghav">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#3b82f6">
+    <link rel="canonical" href="https://chandanghanghav.vercel.app/case-study-photopro.html">
+
+    <!-- Open Graph & Twitter -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://chandanghanghav.vercel.app/case-study-photopro.html">
+    <meta property="og:title" content="PhotoPro Case Study | Chandan Ghanghav">
+    <meta property="og:description" content="UX workflow, interface design, and web engineering notes behind PhotoPro.">
+    <meta property="og:image" content="https://chandanghanghav.vercel.app/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PhotoPro Case Study | Chandan Ghanghav">
+    <meta name="twitter:description" content="UX workflow, interface design, and web engineering notes behind PhotoPro.">
+    <meta name="twitter:image" content="https://chandanghanghav.vercel.app/og-image.png">
+
+    <!-- Stylesheets & Icons -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+          integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- Google AdSense -->
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6527373182140065"
+        crossorigin="anonymous"
+        nonce="cg2024portfolio"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="index.html" class="logo" aria-label="Chandan Ghanghav Home">CG<span>.</span></a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="index.html#websites" class="active">Websites</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span aria-hidden="true">/</span>
+                <a href="index.html#websites">Websites</a>
+                <span aria-hidden="true">/</span>
+                <span>PhotoPro</span>
+            </div>
+            <h1>PhotoPro — Case Study</h1>
+            <p>Exploring fast, accessible browser-based photo editing and creative image workflows without desktop software overhead.</p>
+        </section>
+
+        <section class="section">
+            <div class="article-container">
+
+                <div class="info-grid">
+                    <div class="info-box">
+                        <span>Project Name</span>
+                        <p>PhotoPro</p>
+                    </div>
+                    <div class="info-box">
+                        <span>Category</span>
+                        <p>Online Image &amp; Photo Tools</p>
+                    </div>
+                    <div class="info-box">
+                        <span>Deployment</span>
+                        <p>Vercel (HTTPS)</p>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <h2>1. Project Overview &amp; Motivation</h2>
+                    <p>
+                        Everyday tasks like quick photo adjustments, creative styling, or preparing an image for social media often don't require installing multi-gigabyte desktop software. <strong>PhotoPro</strong> was created as a lightweight web-based photo editing workspace that opens directly in a modern browser.
+                    </p>
+                    <p>
+                        The project focuses on giving creators, students, and casual visitors a clean interface where image adjustments remain intuitive even for people who are not familiar with professional desktop editors.
+                    </p>
+                </div>
+
+                <div class="content-card">
+                    <h2>2. Design Challenges Addressed</h2>
+                    <ul>
+                        <li><strong>Visual Workspace Balance:</strong> An image editor must keep the preview canvas as the central focus while organizing controls so toolbars never feel cramped.</li>
+                        <li><strong>Immediate Feedback:</strong> Controls are structured around clear, predictable adjustments so visitors can preview changes smoothly before exporting.</li>
+                        <li><strong>Cross-Device Usability:</strong> Adapting an editing interface from wide desktop viewports down to smaller tablet and phone screens requires thoughtful control grouping and spacing.</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h2>3. Engineering &amp; Interface Approach</h2>
+                    <h3>Browser-First Creative Workflow</h3>
+                    <p>
+                        By building around native browser capabilities and web UI patterns, PhotoPro removes installation barriers—anyone with a link can test edits in seconds. Keeping the workflow focused on core creative utilities also helps maintain responsive interaction.
+                    </p>
+                    <h3>Clarity Over Feature Bloat</h3>
+                    <p>
+                        Instead of crowding the screen with dozens of rarely used panels, PhotoPro emphasizes clean labeling, straightforward visual hierarchy, and reliable export behavior.
+                    </p>
+                </div>
+
+                <div class="content-card">
+                    <h2>4. Lessons Learned &amp; Next Steps</h2>
+                    <p>
+                        Working on PhotoPro highlighted the importance of visual restraint in creative tools: every control added to the canvas competes for attention. Keeping controls consistent and responsive across screen sizes is essential for usability. Planned refinements focus on polishing keyboard accessibility and expanding preset creative tools cleanly.
+                    </p>
+
+                    <div class="hero-actions hero-actions-left">
+                        <a href="https://photopro-pi.vercel.app/" target="_blank" rel="noopener noreferrer" class="primary-btn">
+                            Visit Live Website <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                        </a>
+                        <a href="case-study-globaltalk.html" class="secondary-btn">
+                            Next: GlobalTalk Case Study <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <nav class="footer-links" aria-label="Footer navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="case-study-careerzoon.html">CareerZoon</a>
+            <a href="case-study-photopro.html">PhotoPro</a>
+            <a href="case-study-globaltalk.html">GlobalTalk</a>
+            <a href="contact.html">Contact</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms.html">Terms &amp; Conditions</a>
+        </nav>
+        <p>© <span id="year"></span> Chandan Ghanghav. All Rights Reserved.</p>
+        <p>
+            <a href="https://www.instagram.com/trigger_toofan"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="webdevchandna Instagram (opens in new tab)">
+                webdevchandna
+            </a>
+        </p>
+    </footer>
+
+    <script src="script.js" nonce="cg2024portfolio"></script>
+</body>
+</html>

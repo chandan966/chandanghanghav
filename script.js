@@ -99,10 +99,67 @@ function initScrollAnimations() {
     });
 }
 
-/* ── 6. Init ──────────────────────────────────────────────────── */
+/* ── 6. Contact page helpers (copy email & mailto composer) ── */
+function initContactHelpers() {
+    const copyBtn = document.getElementById('copy-email-btn');
+    const copyStatus = document.getElementById('copy-status');
+    const emailAddress = 'contactchandan0101@gmail.com';
+
+    if (copyBtn && copyStatus) {
+        copyBtn.addEventListener('click', async () => {
+            try {
+                if (navigator.clipboard && window.isSecureContext) {
+                    await navigator.clipboard.writeText(emailAddress);
+                    copyStatus.textContent = 'Email copied to clipboard.';
+                } else {
+                    copyStatus.textContent = 'Email: ' + emailAddress;
+                }
+            } catch {
+                copyStatus.textContent = 'Email: ' + emailAddress;
+            }
+        });
+    }
+
+    const contactForm = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
+
+    if (contactForm && formStatus) {
+        contactForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const nameEl = document.getElementById('sender-name');
+            const emailEl = document.getElementById('sender-email');
+            const subjectEl = document.getElementById('sender-subject');
+            const messageEl = document.getElementById('sender-message');
+
+            const name = nameEl ? nameEl.value.trim() : '';
+            const email = emailEl ? emailEl.value.trim() : '';
+            const subject = subjectEl ? subjectEl.value.trim() : '';
+            const message = messageEl ? messageEl.value.trim() : '';
+
+            if (!name || !email || !message) {
+                formStatus.textContent = 'Please fill in your name, email, and message.';
+                return;
+            }
+
+            const mailSubject = subject || ('Portfolio Inquiry from ' + name);
+            const mailBody = 'Name: ' + name + '\nEmail: ' + email + '\n\n' + message;
+            const mailtoUrl =
+                'mailto:' + emailAddress +
+                '?subject=' + encodeURIComponent(mailSubject) +
+                '&body=' + encodeURIComponent(mailBody);
+
+            formStatus.textContent = 'Opening your default email client...';
+            window.location.href = mailtoUrl;
+        });
+    }
+}
+
+/* ── 7. Init ──────────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
     hardenExternalLinks();
     initScrollAnimations();
+    initContactHelpers();
     consoleBranding();
 });
 

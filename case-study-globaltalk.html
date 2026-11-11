@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Security Headers (Meta-tag equivalents) -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src  'self' 'nonce-cg2024portfolio' 'strict-dynamic' https://pagead2.googlesyndication.com https://adservice.google.com https://www.googletagservices.com https://tpc.googlesyndication.com https://ep1.adtrafficquality.google https://ep2.adtrafficquality.google;
+        style-src   'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com 'unsafe-inline';
+        font-src    'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+        img-src     'self' data: https:;
+        connect-src 'self' https://pagead2.googlesyndication.com https://adservice.google.com https://googleads.g.doubleclick.net https://ep1.adtrafficquality.google https://ep2.adtrafficquality.google https://csi.gstatic.com;
+        frame-src   'self' https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://pagead2.googlesyndication.com https://*.safeframe.googlesyndication.com https://ep2.adtrafficquality.google https://www.google.com;
+        object-src  'none';
+        base-uri    'self';
+        form-action 'self';
+        upgrade-insecure-requests;
+    ">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), fullscreen=(self)">
+
+    <!-- SEO -->
+    <title>GlobalTalk Case Study | Chandan Ghanghav Portfolio</title>
+    <meta name="description" content="Case study of GlobalTalk — a web communication project built by Chandan Ghanghav to explore clean, responsive conversation experiences.">
+    <meta name="author" content="Chandan Ghanghav">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#3b82f6">
+    <link rel="canonical" href="https://chandanghanghav.vercel.app/case-study-globaltalk.html">
+
+    <!-- Open Graph & Twitter -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://chandanghanghav.vercel.app/case-study-globaltalk.html">
+    <meta property="og:title" content="GlobalTalk Case Study | Chandan Ghanghav">
+    <meta property="og:description" content="Design approach, communication UX, and web engineering lessons behind GlobalTalk.">
+    <meta property="og:image" content="https://chandanghanghav.vercel.app/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GlobalTalk Case Study | Chandan Ghanghav">
+    <meta name="twitter:description" content="Design approach, communication UX, and web engineering lessons behind GlobalTalk.">
+    <meta name="twitter:image" content="https://chandanghanghav.vercel.app/og-image.png">
+
+    <!-- Stylesheets & Icons -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+          integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- Google AdSense -->
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6527373182140065"
+        crossorigin="anonymous"
+        nonce="cg2024portfolio"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="index.html" class="logo" aria-label="Chandan Ghanghav Home">CG<span>.</span></a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="index.html#websites" class="active">Websites</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span aria-hidden="true">/</span>
+                <a href="index.html#websites">Websites</a>
+                <span aria-hidden="true">/</span>
+                <span>GlobalTalk</span>
+            </div>
+            <h1>GlobalTalk — Case Study</h1>
+            <p>Designing a clean, responsive web communication interface for connecting and exchanging messages across borders.</p>
+        </section>
+
+        <section class="section">
+            <div class="article-container">
+
+                <div class="info-grid">
+                    <div class="info-box">
+                        <span>Project Name</span>
+                        <p>GlobalTalk</p>
+                    </div>
+                    <div class="info-box">
+                        <span>Category</span>
+                        <p>Web Communication</p>
+                    </div>
+                    <div class="info-box">
+                        <span>Deployment</span>
+                        <p>Vercel (HTTPS)</p>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <h2>1. Project Overview &amp; Motivation</h2>
+                    <p>
+                        Online communication tools often feel cluttered with complicated menus, notifications, and multi-layered settings. <strong>GlobalTalk</strong> was created as a clean web project exploring how people from different regions can connect and communicate in an approachable, browser-accessible environment.
+                    </p>
+                    <p>
+                        The central idea was keeping the conversation layout straightforward—clear message separation, readable typography, and fast responsiveness across mobile and desktop browsers.
+                    </p>
+                </div>
+
+                <div class="content-card">
+                    <h2>2. UX &amp; Interface Considerations</h2>
+                    <ul>
+                        <li><strong>Conversation Readability:</strong> Clear spacing, contrast, and text sizing ensure messages remain easy to scan during active conversations.</li>
+                        <li><strong>Responsive Layout Structure:</strong> Adapting navigation and message views cleanly between narrow mobile screens and wider desktop monitors prevents horizontal overflow.</li>
+                        <li><strong>Safe Web Practices:</strong> Serving the application over HTTPS with clean client-side input handling helps protect communication flows from basic injection risks.</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h2>3. Engineering Focus</h2>
+                    <h3>Consistent State &amp; Layout Flow</h3>
+                    <p>
+                        Designing a communication interface tests how well an application handles dynamic view changes—resizing viewports, keyboard focus management, and smooth scrolling without jarring layout jumps.
+                    </p>
+                    <h3>Minimal Onboarding Friction</h3>
+                    <p>
+                        Keeping entry steps straightforward allows visitors to understand the purpose of the platform immediately upon landing.
+                    </p>
+                </div>
+
+                <div class="content-card">
+                    <h2>4. Lessons Learned &amp; Next Steps</h2>
+                    <p>
+                        Developing GlobalTalk deepened my appreciation for layout discipline in interactive web apps: predictable spacing, keyboard-friendly inputs, and responsive breakpoints matter just as much as core functionality. Future improvements focus on refining accessibility and exploring richer conversation organization.
+                    </p>
+
+                    <div class="hero-actions hero-actions-left">
+                        <a href="https://globaltalk-tau-plum-26.vercel.app/" target="_blank" rel="noopener noreferrer" class="primary-btn">
+                            Visit Live Website <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                        </a>
+                        <a href="case-study-careerzoon.html" class="secondary-btn">
+                            Back to CareerZoon Case Study <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <nav class="footer-links" aria-label="Footer navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="case-study-careerzoon.html">CareerZoon</a>
+            <a href="case-study-photopro.html">PhotoPro</a>
+            <a href="case-study-globaltalk.html">GlobalTalk</a>
+            <a href="contact.html">Contact</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms.html">Terms &amp; Conditions</a>
+        </nav>
+        <p>© <span id="year"></span> Chandan Ghanghav. All Rights Reserved.</p>
+        <p>
+            <a href="https://www.instagram.com/trigger_toofan"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="webdevchandna Instagram (opens in new tab)">
+                webdevchandna
+            </a>
+        </p>
+    </footer>
+
+    <script src="script.js" nonce="cg2024portfolio"></script>
+</body>
+</html>
